@@ -10,10 +10,6 @@
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
 	branch = master
-[submodule "meta-python2"]
-	path = meta-python2
-	url = https://git.openembedded.org/meta-python2
-	branch = master
 [submodule "meta-amiko"]
 	path = meta-amiko
 	url = https://github.com/OpenVisionE2/meta-amiko.git
