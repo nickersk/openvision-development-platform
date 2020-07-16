@@ -12,8 +12,5 @@ FILES_${PN}-dbg += " \
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += " \
-			file://twisted-17.9.0-python-27-utf-8-fix.patch \
-			"
 
 RDEPENDS_${PN}-core += "${PYTHON_PN}-service-identity"
