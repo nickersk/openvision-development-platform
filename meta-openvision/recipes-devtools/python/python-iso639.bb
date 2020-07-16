@@ -3,7 +3,7 @@ HOMEPAGE = "https://github.com/noumar/iso639"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=4f0bb71e3b4a29e013aa44d05f7cd085"
 
-inherit setuptools gitpkgv
+inherit setuptools3 gitpkgv
 
 PV = "0.4.5+git${SRCPV}"
 PKGV = "0.4.5+git${GITPKGV}"

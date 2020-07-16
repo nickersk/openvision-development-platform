@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS = "enigma2"
 
-inherit gitpkgv autotools pythonnative pkgconfig
+inherit gitpkgv autotools python3native pkgconfig
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"

@@ -12,4 +12,4 @@ SRC_URI = "git://github.com/OpenVisionE2/transmissionrpc.git"
 
 S = "${WORKDIR}/git"
 
-inherit setuptools gitpkgv
+inherit setuptools3 gitpkgv

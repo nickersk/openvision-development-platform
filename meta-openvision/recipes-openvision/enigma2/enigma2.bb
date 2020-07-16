@@ -130,7 +130,7 @@ RDEPENDS_${PN}-build-dependencies = "\
 	wpa-supplicant wireless-tools python-wifi \
 	"
 
-inherit gitpkgv pythonnative upx_compress autotools pkgconfig rm_python_pyc compile_python_pyo
+inherit gitpkgv python3native upx_compress autotools pkgconfig rm_python_pyc compile_python_pyo
 
 ENIGMA2_BRANCH = "develop"
 PV = "develop+git${SRCPV}"

@@ -8,7 +8,7 @@ RDEPENDS_${PN} += "libcurl enigma2 python-compression python-lzma xz python-core
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-inherit gitpkgv python-dir gettext rm_python_pyc compile_python_pyo no_python_src
+inherit gitpkgv python3-dir gettext rm_python_pyc compile_python_pyo no_python_src
 
 PV = "0.8.7+gitr${SRCPV}"
 PKGV = "0.8.7+gitr${GITPKGV}"

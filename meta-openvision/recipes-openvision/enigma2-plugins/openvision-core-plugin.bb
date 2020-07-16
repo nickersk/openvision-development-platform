@@ -10,7 +10,7 @@ RDEPENDS_enigma2-plugin-systemplugins-visioncore = "python-process libcrypto-com
 PROVIDES += "openvision-core-plugin"
 RPROVIDES_enigma2-plugin-systemplugins-visioncore += "openvision-core-plugin"
 
-inherit autotools-brokensep gitpkgv pythonnative rm_python_pyc compile_python_pyo no_python_src
+inherit autotools-brokensep gitpkgv python3native rm_python_pyc compile_python_pyo no_python_src
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"

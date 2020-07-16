@@ -1,4 +1,4 @@
-inherit distutils gettext rm_python_pyc compile_python_pyo no_python_src
+inherit distutils3 gettext rm_python_pyc compile_python_pyo no_python_src
 
 # Scripts want to install "/etc", so we need "--root" instead of setting install-data stuff
 # to remain compatible with previous versions.

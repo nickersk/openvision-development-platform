@@ -7,7 +7,7 @@ require conf/license/license-gplv2.inc
 
 RDEPENDS_${PN} = "gstreamer1.0-plugins-good-flv gstreamer1.0-plugins-bad-rtmp python-json python-html python-requests python-mutagen rtmpdump"
 
-inherit gitpkgv pythonnative gettext autotools-brokensep rm_python_pyc compile_python_pyo no_python_src
+inherit gitpkgv python3native gettext autotools-brokensep rm_python_pyc compile_python_pyo no_python_src
 
 PV = "4.0.+git${SRCPV}"
 PKGV = "4.0.+git${GITPKGV}"

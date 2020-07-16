@@ -5,7 +5,7 @@ DEPENDS = "python"
 
 require conf/license/openvision-gplv2.inc
 
-inherit autotools-brokensep gitpkgv pythonnative
+inherit autotools-brokensep gitpkgv python3native
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"

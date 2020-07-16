@@ -28,7 +28,7 @@ SRC_URI = "git://github.com/OpenVisionE2/servicemp3epl.git;branch=libeplayer"
 
 S = "${WORKDIR}/git"
 
-inherit autotools gitpkgv pythonnative pkgconfig rm_python_pyc compile_python_pyo no_python_src
+inherit autotools gitpkgv python3native pkgconfig rm_python_pyc compile_python_pyo no_python_src
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"

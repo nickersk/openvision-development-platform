@@ -90,7 +90,7 @@ SRC_URI = "${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "git://github.com
 
 S = "${WORKDIR}/git"
 
-inherit autotools gitpkgv pythonnative pkgconfig rm_python_pyc compile_python_pyo no_python_src
+inherit autotools gitpkgv python3native pkgconfig rm_python_pyc compile_python_pyo no_python_src
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"

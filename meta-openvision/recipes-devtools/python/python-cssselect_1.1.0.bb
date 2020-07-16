@@ -11,6 +11,6 @@ SRC_URI[sha256sum] = "f95f8dedd925fd8f54edb3d2dfb44c190d9d18512377d3c1e2388d1612
 
 S = "${WORKDIR}/cssselect-${PV}"
 
-inherit setuptools
+inherit setuptools3
 
 include python-package-split.inc

@@ -13,6 +13,6 @@ SRC_URI[sha256sum] = "6355c11141f6d4b54a17fc2106944806b5db2711e60b120d15d83db438
 
 S = "${WORKDIR}/mechanize-${PV}"
 
-inherit setuptools distutils
+inherit setuptools3 distutils3
 
 include python-package-split.inc

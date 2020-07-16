@@ -6,7 +6,7 @@ RDEPENDS_enigma2-plugin-extensions-openuitzendinggemist = "python-argparse"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-inherit allarch pythonnative gitpkgv autotools-brokensep rm_python_pyc compile_python_pyo no_python_src
+inherit allarch python3native gitpkgv autotools-brokensep rm_python_pyc compile_python_pyo no_python_src
 
 PV = "2+git${SRCPV}"
 PKGV = "2+git${GITPKGV}"

@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "8af66c1c52c7ffe1aa5dc4bcd7c769885254b0756e6e69f953c7f0ab49
 
 S = "${WORKDIR}/${SRCNAME}-${PV}"
 
-inherit setuptools python-dir
+inherit setuptools3 python3-dir
 
 do_compile_append() {
        python2 -O -m compileall ${W}/build

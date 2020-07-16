@@ -3,7 +3,7 @@ DESCRIPTION = "pysmb is an experimental SMB/CIFS library written in Python to su
 LICENSE = "PD"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f696da4bf6c34ef3b926285a84dfa60c"
 
-inherit setuptools
+inherit setuptools3
 
 SRCNAME = "pysmb"
 SRC_URI = "https://files.pythonhosted.org/packages/7a/90/7afb3db088a171f7e425855fab65a182503d205b234eb6bf2e36fd6aa5a5/pysmb-${PV}.zip"

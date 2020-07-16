@@ -15,7 +15,7 @@ SRC_URI = "git://github.com/OpenVisionE2/servicehisilicon.git;branch=master"
 
 S = "${WORKDIR}/git"
 
-inherit autotools gitpkgv pythonnative pkgconfig gettext rm_python_pyc compile_python_pyo no_python_src
+inherit autotools gitpkgv python3native pkgconfig gettext rm_python_pyc compile_python_pyo no_python_src
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"

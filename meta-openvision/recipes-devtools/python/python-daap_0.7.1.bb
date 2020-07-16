@@ -4,7 +4,7 @@ PRIORITY = "optional"
 LICENSE = "LGPLv2.1"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fbc093901857fcd118f065f900982c24"
 
-inherit distutils
+inherit distutils3
 
 SRC_URI = " \
 	http://jerakeen.org/files/PythonDaap-${PV}.tar.gz \
