@@ -249,17 +249,8 @@
 
 # Odin
 * axase3
-* axase3c
 * axodin
-* axodinc
-* classm
-* evo
-* evoe3hd
-* galaxym6
-* genius
-* geniuse3hd
 * maram9
-* starsatlx
 
 # Protek
 * 9900lx

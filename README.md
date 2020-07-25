@@ -4,7 +4,7 @@ Open Vision 10.1 (New) enigma2 images [![Build Status](https://travis-ci.org/Ope
 
 # Download
 
-<strike>You could download our builds from https://openvision.tech/stb-images/</strike>
+You could download some test images from https://openvision.tech/stb-images/
 * How to use sdcard images (E.g. raspberrypi):
 
 You could use https://sourceforge.net/projects/win32diskimager/ or similar tools to write the image on a sdcard.

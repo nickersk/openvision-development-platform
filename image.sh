@@ -442,17 +442,8 @@ fi
 if [ $META = "Odin" ]
 then
 	MACHINE=axase3 $IMAGECMD
-	MACHINE=axase3c $IMAGECMD
 	MACHINE=axodin $IMAGECMD
-	MACHINE=axodinc $IMAGECMD
-	MACHINE=classm $IMAGECMD
-	MACHINE=evo $IMAGECMD
-	MACHINE=evoe3hd $IMAGECMD
-	MACHINE=galaxym6 $IMAGECMD
-	MACHINE=genius $IMAGECMD
-	MACHINE=geniuse3hd $IMAGECMD
 	MACHINE=maram9 $IMAGECMD
-	MACHINE=starsatlx $IMAGECMD
 fi
 if [ $META = "Protek" ]
 then
