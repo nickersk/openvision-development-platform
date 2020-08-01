@@ -2,7 +2,7 @@ SUMMARY = "Multi boot loader for enigma2"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
-inherit gitpkgv pythonnative gettext autotools-brokensep rm_python_pyc compile_python_pyo no_python_src
+inherit gitpkgv python3native gettext autotools-brokensep rm_python_pyc compile_python_pyo no_python_src
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
