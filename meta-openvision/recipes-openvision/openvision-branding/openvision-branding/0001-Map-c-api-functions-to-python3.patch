@@ -1,0 +1,38 @@
+From d2e21b379a5fdcf31cf6b781495af9d227ddac2f Mon Sep 17 00:00:00 2001
+From: Hains <hainsvdbosch@ziggo.nl>
+Date: Sun, 12 Apr 2020 12:34:04 +0200
+Subject: [PATCH] Map c api functions to python3
+
+---
+ BoxBranding/lib/_boxbranding.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+
+diff --git a/BoxBranding/lib/_boxbranding.c b/BoxBranding/lib/_boxbranding.c
+index 66d04d3..88a75f6 100644
+--- a/BoxBranding/lib/_boxbranding.c
++++ b/BoxBranding/lib/_boxbranding.c
+@@ -123,6 +123,19 @@ static PyMethodDef boxbrandingMethods[] = {
+ };
+ 
+ /* Initialize the module */
+-void initboxbranding() {
+-	Py_InitModule("boxbranding", boxbrandingMethods);
++
++static struct PyModuleDef boxbrandingmodule_moduledef = {
++		PyModuleDef_HEAD_INIT,
++		"boxbranding",
++		"boxbranding",
++		-1,
++		boxbrandingMethods,
++		NULL,
++		NULL,
++		NULL,
++		NULL,
++	};
++
++PyObject* PyInit_boxbranding() {
++	PyModule_Create(&boxbrandingmodule_moduledef);
+ }
+-- 
+2.25.1
+
