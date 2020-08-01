@@ -161,14 +161,13 @@ DEPENDS = "\
     openssl \
     ntp \
     parted \
-    python-flickrapi \
-    python-gdata \
-    python-httplib2 \
-    python-google-api-client \
+    python3-flickrapi \
+    python3-httplib2 \
+    python3-google-api-client \
     python-mutagen \
-    python-pyopenssl \
+    python3-pyopenssl \
     python-transmissionrpc \
-    python-twisted \
+    python3-twisted \
     smartmontools \
     streamripper \
     transmission \
@@ -179,7 +178,6 @@ LDFLAGS += "-ltirpc"
 
 RDEPENDS_enigma2-plugin-extensions-ardmediathek = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-autotimer = "python-codecs python-difflib python-re python-threading python-xml enigma2-plugin-systemplugins-mphelp enigma2-plugin-systemplugins-toolkit"
-RDEPENDS_enigma2-plugin-extensions-birthdayreminder = "python-textutils"
 RDEPENDS_enigma2-plugin-extensions-bitrateviewer = "bitratecalc"
 RDEPENDS_enigma2-plugin-extensions-bmediacenter = "libshowiframe"
 RDEPENDS_enigma2-plugin-extensions-bonjour = "avahi-daemon"
@@ -187,60 +185,60 @@ RDEPENDS_enigma2-plugin-extensions-cdinfo = "cdtextinfo kernel-module-isofs"
 RDEPENDS_enigma2-plugin-extensions-curlytx = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-dreammediathek = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-dvdbackup = "cdrkit libdvdread dvdbackup"
-RDEPENDS_enigma2-plugin-extensions-ecasa = "python-gdata python-shell python-netclient python-io python-twisted-web python-flickrapi enigma2-plugin-systemplugins-toolkit"
-RDEPENDS_enigma2-plugin-extensions-emailclient = "python-twisted-web python-twisted-mail python-email python-pyopenssl python-shell python-textutils"
+RDEPENDS_enigma2-plugin-extensions-ecasa = "python3-gdata python3-shell python3-netclient python3-io python3-twisted-web python3-flickrapi enigma2-plugin-systemplugins-toolkit"
+RDEPENDS_enigma2-plugin-extensions-emailclient = "python3-twisted-web python3-twisted-mail python3-email python3-pyopenssl python3-shell"
 RDEPENDS_enigma2-plugin-extensions-emission = "python-transmissionrpc"
 RDEPENDS_enigma2-plugin-extensions-eparted = "parted"
-RDEPENDS_enigma2-plugin-extensions-epgbackup = "python-subprocess enigma2-plugin-systemplugins-mphelp"
+RDEPENDS_enigma2-plugin-extensions-epgbackup = "enigma2-plugin-systemplugins-mphelp"
 RDEPENDS_enigma2-plugin-extensions-epgrefresh = "python-codecs python-lang python-xml enigma2-plugin-systemplugins-mphelp"
 RDEPENDS_enigma2-plugin-extensions-fancontrol2 = "hdparm smartmontools"
-RDEPENDS_enigma2-plugin-extensions-fritzcall = "python-twisted-web python-html python-textutils"
-RDEPENDS_enigma2-plugin-extensions-ftpbrowser = "python-twisted-protocols python-shell enigma2-plugin-systemplugins-toolkit"
+RDEPENDS_enigma2-plugin-extensions-fritzcall = "python3-twisted-web python3-html"
+RDEPENDS_enigma2-plugin-extensions-ftpbrowser = "python3-twisted-protocols python3-shell enigma2-plugin-systemplugins-toolkit"
 RDEPENDS_enigma2-plugin-extensions-googlemaps = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-growlee = "python-twisted-protocols python-netclient python-crypt python-re python-threading python-lang"
 RDEPENDS_enigma2-plugin-extensions-httpproxy = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-imdb = "python-html python-twisted-web enigma2-plugin-systemplugins-toolkit"
-RDEPENDS_enigma2-plugin-extensions-infobartunerstate = "python-shell python-re"
+RDEPENDS_enigma2-plugin-extensions-infobartunerstate = "python3-shell"
 RDEPENDS_enigma2-plugin-extensions-lastfm = "python-twisted-web python-crypt"
 RDEPENDS_enigma2-plugin-extensions-logomanager = "enigma2-plugin-extensions-filebrowser"
-RDEPENDS_enigma2-plugin-extensions-mediadownloader = "python-twisted-web python-netclient python-shell"
-RDEPENDS_enigma2-plugin-extensions-menusort = "python-shell python-xml python-codecs python-lang"
+RDEPENDS_enigma2-plugin-extensions-mediadownloader = "python3-twisted-web python3-netclient python3-shell"
+RDEPENDS_enigma2-plugin-extensions-menusort = "python3-shell python-xml python3-codecs python3-lang"
 RDEPENDS_enigma2-plugin-extensions-merlinmusicplayer = "python-twisted-web python-mutagen python-sqlite3"
 RDEPENDS_enigma2-plugin-extensions-mosaic = "aio-grab"
 RDEPENDS_enigma2-plugin-extensions-movieepg = "python-lang"
 RDEPENDS_enigma2-plugin-extensions-movielistpreview = "aio-grab"
 RDEPENDS_enigma2-plugin-extensions-moviesearch = "enigma2-plugin-systemplugins-toolkit"
-RDEPENDS_enigma2-plugin-extensions-mytube = "python-twisted-web python-gdata gstreamer1.0-plugins-good-flv python-textutils python-json python-google-api-client python-httplib2 python-youtube-dl python-ctypes"
-RDEPENDS_enigma2-plugin-extensions-ncidclient = "python-twisted-web python-html python-textutils"
+RDEPENDS_enigma2-plugin-extensions-mytube = "python3-twisted-web gstreamer1.0-plugins-good-flv python3-json python3-google-api-client python3-httplib2 python-youtube-dl python3-ctypes"
+RDEPENDS_enigma2-plugin-extensions-ncidclient = "python3-twisted-web python3-html"
 RDEPENDS_enigma2-plugin-extensions-netcaster = "gstreamer1.0-plugins-good-icydemux"
 RDEPENDS_enigma2-plugin-extensions-ofdb = "python-html python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-orfat = "enigma2-plugin-extensions-vlcplayer python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-partnerbox = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-pipzap = "enigma2-plugin-systemplugins-mphelp"
 RDEPENDS_enigma2-plugin-extensions-pluginhider = "python-lang"
-RDEPENDS_enigma2-plugin-extensions-pluginsort = "python-shell python-xml python-codecs python-lang enigma2-plugin-systemplugins-mphelp"
+RDEPENDS_enigma2-plugin-extensions-pluginsort = "python3-shell python3-xml python3-codecs python3-lang enigma2-plugin-systemplugins-mphelp"
 RDEPENDS_enigma2-plugin-extensions-podcast = "python-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-pushservice = "python-xml python-email python-twisted-core python-twisted-mail python-twisted-names python-twisted-protocols python-twisted-web python-pyopenssl openssl python-io"
 RDEPENDS_enigma2-plugin-extensions-remotetimer = "python-twisted-web"
-RDEPENDS_enigma2-plugin-extensions-seriesplugin = "python-difflib python-json python-re python-xml python-xmlrpc"
+RDEPENDS_enigma2-plugin-extensions-seriesplugin = "python-difflib python3-json python-re python-xml python-xmlrpc"
 RDEPENDS_enigma2-plugin-extensions-shoutcast = "python-twisted-web streamripper"
 RDEPENDS_enigma2-plugin-extensions-simplerss = "python-twisted-web python-codecs python-xml enigma2-plugin-extensions-mediadownloader enigma2-plugin-systemplugins-toolkit"
-RDEPENDS_enigma2-plugin-extensions-subsdownloader2 = "enigma2-plugin-extensions-pictureplayer enigma2-plugin-extensions-dvdplayer python-zlib python-io python-shell python-compression python-html python-subprocess"
-RDEPENDS_enigma2-plugin-extensions-svdrp = "python-twisted-protocols"
+RDEPENDS_enigma2-plugin-extensions-subsdownloader2 = "enigma2-plugin-extensions-pictureplayer enigma2-plugin-extensions-dvdplayer python3-io python3-shell python3-compression python3-html"
+RDEPENDS_enigma2-plugin-extensions-svdrp = "python3-twisted-protocols"
 RDEPENDS_enigma2-plugin-extensions-teletext = "enigma2-plugin-systemplugins-toolkit"
-RDEPENDS_enigma2-plugin-extensions-trafficinfo = "python-twisted-web"
+RDEPENDS_enigma2-plugin-extensions-trafficinfo = "python3-twisted-web"
 RDEPENDS_enigma2-plugin-extensions-transmission = "transmission transmission-client"
-RDEPENDS_enigma2-plugin-extensions-tvcharts = "python-twisted-web"
-RDEPENDS_enigma2-plugin-extensions-unwetterinfo = "python-twisted-web"
-RDEPENDS_enigma2-plugin-extensions-weatherplugin = "python-twisted-web"
-RDEPENDS_enigma2-plugin-extensions-webcamviewer = "python-twisted-web python-shell"
-RDEPENDS_enigma2-plugin-extensions-youtubeplayer = "enigma2-plugin-extensions-vlcplayer python-twisted-web python-gdata python-misc python-textutils"
-RDEPENDS_enigma2-plugin-extensions-yttrailer = "python-twisted-web python-gdata gstreamer1.0-plugins-good-flv"
+RDEPENDS_enigma2-plugin-extensions-tvcharts = "python3-twisted-web"
+RDEPENDS_enigma2-plugin-extensions-unwetterinfo = "python3-twisted-web"
+RDEPENDS_enigma2-plugin-extensions-weatherplugin = "python3-twisted-web"
+RDEPENDS_enigma2-plugin-extensions-webcamviewer = "python3-twisted-web python-shell"
+RDEPENDS_enigma2-plugin-extensions-youtubeplayer = "enigma2-plugin-extensions-vlcplayer python3-twisted-web python3-gdata python3-misc"
+RDEPENDS_enigma2-plugin-extensions-yttrailer = "python-twisted-web gstreamer1.0-plugins-good-flv"
 RDEPENDS_enigma2-plugin-extensions-zdfmediathek = "python-html python-twisted-web"
 RDEPENDS_enigma2-plugin-systemplugins-mphelp = "python-xml"
 #RDEPENDS_enigma2-plugin-systemplugins-networkbrowser = "autofs smbclient"
 RDEPENDS_enigma2-plugin-systemplugins-systemtime = "ntpdate"
-RDEPENDS_enigma2-plugin-systemplugins-toolkit = "python-twisted-core python-threading python-html python-re"
+RDEPENDS_enigma2-plugin-systemplugins-toolkit = "python3-twisted-core python3-threading python3-html"
 RDEPENDS_enigma2-plugin-systemplugins-weathercomponenthandler = "enigma2-plugin-extensions-weatherplugin enigma2-plugin-skincomponents-weathercomponent"
 
 RDEPENDS_enigma2-plugin-skincomponents-weathercomponent = "enigma2-plugin-extensions-weatherplugin"

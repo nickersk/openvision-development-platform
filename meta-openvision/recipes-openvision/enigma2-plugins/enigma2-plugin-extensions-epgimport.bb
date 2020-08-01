@@ -14,8 +14,8 @@ SRC_URI = "${GITHUB_URI}/OpenPLi/${BPN}.git"
 
 S = "${WORKDIR}/git/src"
 
-DEPENDS = "python"
-RDEPENDS_${PN} = "python-compression python-shell python-lzma python-pkgutil"
+DEPENDS = "python3"
+RDEPENDS_${PN} = "python3-compression python3-shell python3-lzma python3-pkgutil"
 RRECOMMENDS_${PN} = "${PN}-rytec"
 PACKAGES = "${PN}-dbg ${PN}"
 

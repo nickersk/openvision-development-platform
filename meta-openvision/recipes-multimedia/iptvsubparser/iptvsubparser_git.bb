@@ -2,7 +2,7 @@ DESCRIPTION = "Python module for text subtitles parsing"
 MAINTAINER = "samsamsam"
 require conf/license/openvision-gplv2.inc
 
-DEPENDS = "python"
+DEPENDS = "python3"
 
 inherit gitpkgv
 

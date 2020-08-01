@@ -13,7 +13,7 @@ SRC_URI = "git://github.com/OpenVisionE2/openmultibootmanager.git;protocol=git"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "python lzo"
+DEPENDS = "python3 lzo"
 
 RDEPENDS_${PN} = "\
     ${@bb.utils.contains("IMAGE_FSTYPES", "jffs2", "kernel-module-block2mtd kernel-module-nandsim" , "", d)} \

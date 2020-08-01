@@ -4,7 +4,7 @@ SECTION = "devel/python"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.rst;md5=07b0e2ca9ac77cd65cd4edf2e13367ea"
 
-RDEPENDS_${PN} = "python-requests"
+RDEPENDS_${PN} = "python3-requests"
 
 SRC_URI = "https://files.pythonhosted.org/packages/26/c6/973220a9332982d9c37c0443ab98a03008d51cb39796b32309a58e977f89/soco-${PV}.tar.gz"
 

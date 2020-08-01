@@ -4,8 +4,8 @@ SECTION = "devel/python"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://LICENSE.rst;md5=1b2957cd26c589d0defcb357be630e80"
 
-DEPENDS[pkgvarcheck] = "python-pytz python-dateutil"
-RDEPENDS_${PN} = "python-pytz python-dateutil"
+DEPENDS[pkgvarcheck] = "python3-pytz python3-dateutil"
+RDEPENDS_${PN} = "python3-pytz python3-dateutil"
 
 SRC_URI = "https://files.pythonhosted.org/packages/e4/dd/67c363b99c4384c66bcf94c1abf9b749dd4e809a44bd6db575ec8e22be89/icalendar-${PV}.tar.gz"
 

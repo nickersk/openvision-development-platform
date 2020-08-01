@@ -9,7 +9,7 @@ PV = "2.1.3+git${SRCPV}"
 PKGV = "2.1.3+git${GITPKGV}"
 
 DEPENDS = "python virtual/gettext"
-RDEPENDS_${PN} += "curl mjpegtools python-ctypes libshowiframe0 python-imaging"
+RDEPENDS_${PN} += "curl mjpegtools python3-ctypes libshowiframe0 python3-pillow"
 
 SRC_URI = " \
 	git://github.com/DonDavici/DreamPlex.git;protocol=git \

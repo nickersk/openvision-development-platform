@@ -2,10 +2,10 @@ MAINTAINER = "team@sabnzbd.org"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYRIGHT.txt;md5=6c2cd2089133de5067e13a6d4f75afef"
 
-DEPENDS = "python"
+DEPENDS = "python3"
 RDEPENDS_${PN} = "\
-	python-core python-shell python-compression python-crypt python-ctypes python-sqlite3 \
-	python-cheetah python-misc python-subprocess python-html python-email python-yenc \
+	python3-core python3-shell python3-compression python3-crypt python3-ctypes python3-sqlite3 \
+	python3-cheetah python3-misc python3-html python3-email python3-yenc \
 	"
 RRECOMMENDS_${PN} = "par2cmdline unrar"
 

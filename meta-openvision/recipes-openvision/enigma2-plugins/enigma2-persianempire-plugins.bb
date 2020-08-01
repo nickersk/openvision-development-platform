@@ -44,11 +44,10 @@ DEPENDS = "\
     dvb-apps \
     hairtunes \
     hddtemp \
-    python-subprocess32 \
     unrar \
     "
 
-RDEPENDS_enigma2-plugin-extensions-airplayer = "python-ctypes python-misc python-shell python-subprocess gst-plugins-bad-fragmented hairtunes"
+RDEPENDS_enigma2-plugin-extensions-airplayer = "python3-ctypes python3-misc python3-shell gst-plugins-bad-fragmented hairtunes"
 DESCRIPTION_enigma2-plugin-extensions-blockcontent = "Block Content for enigma2"
 FILES_enigma2-plugin-extensions-deviceinfo_append = "${libdir}/enigma2/python/Components/Converter/ProgressDiskSpaceInfo.pyo"
 FILES_enigma2-plugin-extensions-deviceinfo-src_append = "${libdir}/enigma2/python/Components/Converter/ProgressDiskSpaceInfo.py"

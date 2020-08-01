@@ -3,8 +3,8 @@ SECTION = "devel/python"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
-DEPENDS = "python"
-RDEPENDS_${PN} = "python-shell"
+DEPENDS = "python3"
+RDEPENDS_${PN} = "python3-shell"
 
 SRC_URI = "https://files.pythonhosted.org/packages/aa/fd/ed738775442e3614849fefdf41417d7bff3ccb010d49c8f729432cc3c1e5/mutagen-${PV}.tar.gz"
 

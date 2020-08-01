@@ -77,28 +77,28 @@ OPTIONAL_PACKAGES += "\
 	procps \
 	pv \
 	pyload \
-	python-attr \
-	python-attrs \
-	python-beautifulsoup4 \
-	python-bluetool \
-	python-future \
-	python-futures \
-	python-iso3166 \
-	python-iso639 \
-	python-isodate \
-	python-js2py \
-	python-lxml \
-	python-mechanize \
-	python-ntplib \
-	python-pexpect \
-	python-pip \
-	python-pyasn1-modules \
-	python-pyexecjs \
-	python-requests \
+	python3-attr \
+	python3-attrs \
+	python3-beautifulsoup4 \
+	python3-bluetool \
+	python3-future \
+	python3-futures \
+	python3-iso3166 \
+	python3-iso639 \
+	python3-isodate \
+	python3-js2py \
+	python3-lxml \
+	python3-mechanize \
+	python3-ntplib \
+	python3-pexpect \
+	python3-pip \
+	python3-pyasn1-modules \
+	python3-pyexecjs \
+	python3-requests \
 	python-soco \
 	python-singledispatch \
 	python-ujson \
-	python-websocket-client \
+	python3-websocket-client \
 	python-youtube-dl \
 	rclone \
 	rsync \
