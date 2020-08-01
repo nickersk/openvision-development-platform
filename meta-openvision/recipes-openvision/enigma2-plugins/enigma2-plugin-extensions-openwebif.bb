@@ -27,7 +27,9 @@ PKGV = "git${GITPKGV}"
 
 SRC_URI = "git://github.com/OpenVisionE2/OpenWebif.git;protocol=git"
 
-S="${WORKDIR}/git"
+SRC_URI_append_sh4 += " file://revert_grab_for_sh4.patch "
+
+S = "${WORKDIR}/git"
 
 do_compile() {
 	cheetah-compile -R --nobackup ${S}/plugin
@@ -86,7 +88,7 @@ python do_cleanup () {
         ('gbx3h', 'gbx3h.png', 'gb2.png', 'gb2.html'),
         ('gbultraueh', 'gbultraueh.png', 'gb2.png', 'gb2.html'),
         ('gbquad4k', 'gbquad4k.png', 'gb3.png', 'gb3.html'),
-        ('gbue4k', 'gbue4k.png', 'gb3.png', 'gb3.html'),
+        ('gbue4k', 'gbue4k.png', 'gb4.png', 'gb4.html'),
         ('gbtrio4k', 'gbtrio4k.png', 'gb3.png', 'gb3.html'),
         ('gbip4k', 'gbip4k.png', 'gb3.png', 'gb3.html'),
         ('gbx34k', 'gbx34k.png', 'gb3.png', 'gb3.html'),

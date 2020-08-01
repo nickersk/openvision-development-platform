@@ -20,7 +20,11 @@ do_install() {
 	install -d ${D}${sysconfdir}
 	install -d ${D}${sysconfdir}/openvision
 	echo "STB=${MACHINE}" > ${D}${sysconfdir}/image-version
+	echo "${MACHINE}" > ${D}${sysconfdir}/openvision/model
 	echo "Brand=${BOX_BRAND}" >> ${D}${sysconfdir}/image-version
+	echo "${BOX_BRAND}" > ${D}${sysconfdir}/openvision/brand
+	echo "Platform=${STB_PLATFORM}" >> ${D}${sysconfdir}/image-version
+	echo "${STB_PLATFORM}" > ${D}${sysconfdir}/openvision/platform
 	echo "box_type=${MACHINE}" >> ${D}${sysconfdir}/image-version
 	echo "build_type=0" >> ${D}${sysconfdir}/image-version
 	echo "machine_brand=${BOX_BRAND}" >> ${D}${sysconfdir}/image-version
@@ -45,6 +49,9 @@ do_install() {
 	echo "catalog=https://github.com/OpenVisionE2" >> ${D}${sysconfdir}/image-version
 	echo "distro=${DISTRO_NAME}" >> ${D}${sysconfdir}/image-version
 	echo "${DISTRO_NAME}" > ${D}${sysconfdir}/openvision/distro
+	echo "imageversion=${DISTRO_VERSION}" >> ${D}${sysconfdir}/image-version
+	echo "imagedevbuild=${DEVELOPER_BUILD_VERSION}" >> ${D}${sysconfdir}/image-version
+	echo "imagetype=${DISTRO_TYPE}" >> ${D}${sysconfdir}/image-version
 	echo "oe=${BUILD_VERSION}" >> ${D}${sysconfdir}/image-version
 	echo "${BUILD_VERSION}" > ${D}${sysconfdir}/openvision/oe
 	echo "python=${PREFERRED_VERSION_python}" >> ${D}${sysconfdir}/image-version
@@ -111,8 +118,16 @@ do_install() {
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "vfdsymbol", "1", "0", d)}" = "1" ]; then
 		echo "vfdsymbol=${HAVE_VFDSYMBOL}" >> ${D}${sysconfdir}/image-version
 	fi
-	echo "${MACHINE}" > ${D}${sysconfdir}/openvision/model
-	echo "${BOX_BRAND}" > ${D}${sysconfdir}/openvision/brand
+	echo "${IMAGEDIR}" > ${D}${sysconfdir}/openvision/imagedir
+	echo "${IMAGE_FSTYPES}" > ${D}${sysconfdir}/openvision/imagefs
+	echo "${MTD_BOOTFS}" > ${D}${sysconfdir}/openvision/mtdbootfs
+	echo "${MTD_ROOTFS}" > ${D}${sysconfdir}/openvision/mtdrootfs
+	echo "${MTD_KERNEL}" > ${D}${sysconfdir}/openvision/mtdkernel
+	echo "${ROOTFS_FILE}" > ${D}${sysconfdir}/openvision/rootfile
+	echo "${KERNEL_FILE}" > ${D}${sysconfdir}/openvision/kernelfile
+	echo "${MKUBIFS_ARGS}" > ${D}${sysconfdir}/openvision/mkubifs
+	echo "${UBINIZE_ARGS}" > ${D}${sysconfdir}/openvision/ubinize
+	echo "${FORCE}" > ${D}${sysconfdir}/openvision/forcemode
 }
 
 pkg_postinst_ontarget_${PN} () {

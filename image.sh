@@ -16,6 +16,15 @@ echo -e ""
 if [ -f user.ovstep ]; then
 	echo -e "Seems you run ltsubuntu.sh before but keep in mind it's better to run it each month to get latest updates."
 	echo -e ""
+	if grep -Fqi "twice" user.ovstep
+	then
+	    echo -e "Seems you have the second updates too."
+	    echo -e ""
+	else
+	    echo -e "We know you run ltsubuntu.sh before but there are some updates available!"
+	    /bin/sh ltsubuntu.sh
+	    echo "twice" >> user.ovstep
+	fi
 else
 	echo -e "Oh, we need to setup your Ubuntu so you need internet connection and a cup of coffee."
 	/bin/sh ltsubuntu.sh

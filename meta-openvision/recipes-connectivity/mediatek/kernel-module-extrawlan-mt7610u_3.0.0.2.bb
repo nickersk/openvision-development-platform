@@ -16,9 +16,8 @@ SRC_URI = "https://raw.githubusercontent.com/OpenVisionE2/linux-firmwares/master
 	file://0005-buildfix.patch;patch=1 \
 	file://0006-kernel-4_6.patch;patch=1 \
 	file://0007-kernel-4_11.patch;patch=1 \
+	${@bb.utils.contains_any("MACHINE", "dm900 dm920", "file://fix-arm-build.patch", "", d)} \
 	"
-
-SRC_URI_append_arm += "file://fix-arm-build.patch"
 
 S = "${WORKDIR}/mt7610u_wifi_sta_v3002_dpo_20130916"
 

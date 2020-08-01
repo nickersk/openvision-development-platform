@@ -25,16 +25,14 @@ pkg_postinst_${PN}_exteplayeronly() {
 	fi
 }
 
-SRC_URI = "git://github.com/mx3L/serviceapp.git;branch=develop \
-    file://remove-deprecated-sFileSize.patch \
-    "
+SRC_URI = "git://github.com/OpenVisionE2/serviceapp.git;branch=develop"
 
 S = "${WORKDIR}/git"
 
 inherit autotools gitpkgv python3native pkgconfig gettext rm_python_pyc compile_python_pyo no_python_src
 
-PV = "1+git${SRCPV}"
-PKGV = "1+git${GITPKGV}"
+PV = "git${SRCPV}"
+PKGV = "git${GITPKGV}"
 
 EXTRA_OECONF = "\
 	BUILD_SYS=${BUILD_SYS} \
