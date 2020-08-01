@@ -1,13 +1,20 @@
+Test branch OV 10.1 with Python 3.<br>
+WIP, not ready yet.<br>
+
+If you're already building from develop branch (python 2.17.18), please setup a seperate(new) build-environment for Pyhton 3.<br>
+
+TODO:<br>
+-Fix build issues to a lot of plugins.<br>
+-FIX runtime issues e.g. module import errors, bytes/unicode errors etc.<br>
+<br>
+Developers can help us with pull-request.<br>
+We appreciate that.<br>
+<br>
+
 Open Vision 10.1 (New) enigma2 images [![Build Status](https://travis-ci.org/OpenVisionE2/openvision-development-platform.svg?branch=develop)](https://travis-ci.org/OpenVisionE2/openvision-development-platform) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 =====================================
 ![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/develop/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
 
-# Download
-
-You could download some test images from https://openvision.tech/stb-images/
-* How to use sdcard images (E.g. raspberrypi):
-
-You could use https://sourceforge.net/projects/win32diskimager/ or similar tools to write the image on a sdcard.
 
 # Login
 
@@ -42,11 +49,11 @@ If you see your model in https://github.com/OpenVisionE2/openvision-development-
 You could compile Open Vision for so many brands/models:
 * Vision-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md
 
-# How to build an Open Vision image (on native Ubuntu Desktop 18.04.x LTS x64)
+# How to build an Open Vision image (on native Ubuntu Desktop 20.04.x LTS x64)
 
 1. Clone openvision-development-platform:
 ```
-git clone --depth 1 https://github.com/OpenVisionE2/openvision-development-platform.git
+git clone --depth 1 -b python3 https://github.com/OpenVisionE2/openvision-development-platform.git
 ```
 2. Run our image.sh script (Do not run bitbake or any related script as root!):
 ```
