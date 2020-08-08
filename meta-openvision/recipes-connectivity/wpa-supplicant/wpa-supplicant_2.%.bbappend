@@ -7,13 +7,13 @@ inherit upx_compress
 
 FILES_wpa-supplicant-passphrase = "${bindir}/wpa_passphrase"
 
-SRC_URI += " \
-        file://action_wpa.sh \
-        file://functions.sh \
-        file://ifupdown.sh \
-        file://wpa_action \
-        file://wpa_action.8 \
-"
+SRC_URI += "\
+	file://action_wpa.sh \
+	file://functions.sh \
+	file://ifupdown.sh \
+	file://wpa_action \
+	file://wpa_action.8 \
+	"
 
 do_configure_append() {
         sed -e '/^CONFIG_TLS = gnutls/d' -i wpa_supplicant/.config

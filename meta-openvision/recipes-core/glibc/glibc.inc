@@ -40,7 +40,7 @@ inherit autotools texinfo systemd
 
 LEAD_SONAME = "libc.so"
 
-CACHED_CONFIGUREVARS += " \
+CACHED_CONFIGUREVARS += "\
   ac_cv_path_BASH_SHELL=${base_bindir}/bash \
   libc_cv_slibdir=${base_libdir} \
   libc_cv_rootsbindir=${base_sbindir} \

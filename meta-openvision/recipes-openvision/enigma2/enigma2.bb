@@ -16,7 +16,7 @@ DEPENDS = "\
 	tuxtxt-enigma2 \
 	"
 
-DEPENDS_append_sh4 += "\
+DEPENDS_append_sh4 = " \
 	libmme-host \
 	libmme-image \
 	"
@@ -43,7 +43,7 @@ RDEPENDS_${PN} = "\
 	${@bb.utils.contains("MACHINE_FEATURES", "emmc", "bzip2 rsync", "", d)} \
 	"
 
-RDEPENDS_${PN}_append_sh4 += "\
+RDEPENDS_${PN}_append_sh4 = " \
 	alsa-utils-amixer-conf \
 	libmme-host \
 	"
@@ -134,7 +134,7 @@ PV = "develop+git${SRCPV}"
 PKGV = "develop+git${GITPKGV}"
 
 SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=${ENIGMA2_BRANCH}"
-SRC_URI_append += "${@bb.utils.contains("MACHINE_FEATURES", "uianimation", " file://use-lv3ddriver-for-uianimation.patch" , "", d)}"
+SRC_URI_append = " ${@bb.utils.contains("MACHINE_FEATURES", "uianimation", " file://use-lv3ddriver-for-uianimation.patch" , "", d)}"
 
 LDFLAGS_prepend = " -lxml2 "
 
@@ -239,4 +239,4 @@ python populate_packages_prepend() {
     do_split_packages(d, enigma2_podir, '^(\w+)/[a-zA-Z0-9_/]+.*$', 'enigma2-locale-%s', '%s', recursive=True, match_path=True, prepend=True, extra_depends="enigma2")
 }
 
-CXXFLAGS_append_sh4 += " -std=c++11 -fPIC -fno-strict-aliasing "
+CXXFLAGS_append_sh4 = " -std=c++11 -fPIC -fno-strict-aliasing"

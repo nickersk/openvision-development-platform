@@ -1,10 +1,10 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += "  \
-			file://smbnetfs.common.conf \
-			file://smbnetfs.user.conf \
-			file://init \
-			"
+SRC_URI += "\
+	file://smbnetfs.common.conf \
+	file://smbnetfs.user.conf \
+	file://init \
+	"
 
 FILES_${PN} += "${sysconfdir}/*.conf ${sysconfdir}/init.d"
 CONFFILES_${PN} = "${sysconfdir}/smbnetfs.user.conf"

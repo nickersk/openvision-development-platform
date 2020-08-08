@@ -27,7 +27,7 @@ PKGV = "git${GITPKGV}"
 
 SRC_URI = "git://github.com/OpenVisionE2/OpenWebif.git;protocol=git"
 
-SRC_URI_append_sh4 += " file://revert_grab_for_sh4.patch "
+SRC_URI_append_sh4 = " file://revert_grab_for_sh4.patch"
 
 S = "${WORKDIR}/git"
 

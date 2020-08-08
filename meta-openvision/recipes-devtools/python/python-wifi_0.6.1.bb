@@ -14,7 +14,7 @@ SRC_URI = "https://pypi.python.org/packages/bc/ab/c49f97516f78c2b0cacb4f45873abc
 			file://port-to-python3.patch \
 			"
 
-SRC_URI_append_aarch64 += " file://python-wifi-0.6.1-64bit.patch"
+SRC_URI_append_aarch64 += "file://python-wifi-0.6.1-64bit.patch"
 
 SRC_URI[md5sum] = "033227169230286a63b9c059e7465c77"
 SRC_URI[sha256sum] = "7bff6afbc03b1cb13f987e5cf3b597b8821a1b86e5b34182406d98657f1b2c91"

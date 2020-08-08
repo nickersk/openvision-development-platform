@@ -1,1 +1,1 @@
-CFLAGS_append_sh4 += " -std=c99"
+CFLAGS_append_sh4 = " -std=c99"

@@ -22,6 +22,6 @@ do_install() {
 }
 
 
-SRC_URI_append_sh4 += "\
+SRC_URI_append_sh4 = " \
     file://showiframe-sh4.patch \
 "

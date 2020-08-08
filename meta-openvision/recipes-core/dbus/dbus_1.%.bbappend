@@ -4,9 +4,9 @@ inherit upx_compress
 # but /run/dbus does not exist, so dbus (and dependant avahi services) wont start
 
 EXTRA_OECONF = "--disable-tests \
-				--disable-xml-docs \
-				--disable-doxygen-docs \
-				--disable-libaudit \
-				--enable-largefile \
-				--with-system-socket=${localstatedir}/run/dbus/system_bus_socket \
-"
+	--disable-xml-docs \
+	--disable-doxygen-docs \
+	--disable-libaudit \
+	--enable-largefile \
+	--with-system-socket=${localstatedir}/run/dbus/system_bus_socket \
+	"

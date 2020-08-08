@@ -5,13 +5,22 @@ NC='\033[0m' # No Color
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[0;33m'
+if grep -Fqi "ubuntu" /etc/*-release
+then
+    echo -e "${GREEN}You have Ubuntu, great!${NC}"
+    echo -e ""
+else
+    echo -e "${RED}We only support Ubuntu!${NC}"
+    echo -e ""
+    exit 0
+fi
 VISIONVERSION=`cat meta-openvision/conf/distro/openvision-common.conf | grep -oP '(?<=VISIONVERSION = ")[0-9].[0-9]*'`
 VISIONREVISION=`cat meta-openvision/conf/distro/openvision-common.conf | grep -oP '(?<=VISIONREVISION = "r)[0-9]*'`
 echo -e "${BLUE}Welcome to Open Vision ${GREEN}${VISIONVERSION}-r${VISIONREVISION} ${BLUE}image compile script!"
 echo -e ""
 echo -e "${RED}Notice: this script is case sensitive!${NC}"
 echo -e ""
-echo -e "First we need to check your Ubuntu 18.04.x"
+echo -e "First we need to check your Ubuntu 20.04.x"
 echo -e ""
 if [ -f user.ovstep ]; then
 	echo -e "Seems you run ltsubuntu.sh before but keep in mind it's better to run it each month to get latest updates."

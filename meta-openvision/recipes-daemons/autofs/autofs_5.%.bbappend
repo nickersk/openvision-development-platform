@@ -2,7 +2,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 EXTRA_OECONF += "--with-confdir=${sysconfdir}/default"
 
-SRC_URI += " file://99_autofs"
+SRC_URI += "file://99_autofs"
 
 CONFFILES = "${sysconfdir}/auto.master ${sysconfdir}/auto.net"
 

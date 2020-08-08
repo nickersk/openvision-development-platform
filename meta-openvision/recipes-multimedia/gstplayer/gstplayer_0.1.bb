@@ -7,14 +7,14 @@ DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base"
 
 inherit pkgconfig
 
-SRC_URI = "git://github.com/OpenVisionE2/gstplayer.git \
+SRC_URI = "git://gitlab.com/e2i/gstplayer.git;protocol=http \
 	file://0001-set-iptv-download-timeout-0-to-disable-ifdsrc.patch \
 	file://0004-rename-stored-sink-to-dvbSink-for-clarity.patch \
 	file://0009-try-to-get-PTS-from-video-sink-first.patch \
 	file://0011-increase-eos-fix-timeout-to-10s.patch \
-"
+	"
 
-S = "${WORKDIR}/git/"
+S = "${WORKDIR}/git"
 
 do_compile() {
     cd ${S}/gst-1.0
@@ -26,10 +26,10 @@ do_install() {
     install -m 0755 ${S}/gst-1.0/gstplayer_gst-1.0 ${D}${bindir}/gstplayer
 }
 
-pkg_postinst_${PN}() {
-    ln -sf gstplayer $D${bindir}/gstplayer_gst-1.0
+pkg_postinst_ontarget_${PN}() {
+    ln -sf gstplayer ${bindir}/gstplayer_gst-1.0
 }
 
 pkg_prerm_${PN}() {
-    rm -f $D${bindir}/gstplayer_gst-1.0
+    rm -f ${bindir}/gstplayer_gst-1.0
 }

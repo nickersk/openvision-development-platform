@@ -9,4 +9,4 @@ SRC_URI = " git://anongit.freedesktop.org/gstreamer/gst-plugins-good;branch=mast
 			file://001-gstrtpmp4gpay-set-dafault-value-for-MPEG4-without-co.patch \
 "
 
-CFLAGS_append_sh4 += " -std=gnu99"
+CFLAGS_append_sh4 = " -std=gnu99"

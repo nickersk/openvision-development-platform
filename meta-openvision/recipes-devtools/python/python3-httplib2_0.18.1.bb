@@ -43,7 +43,7 @@ FILES_${PN}-src = " \
     ${PYTHON_SITEPACKAGES_DIR}/*/*/*/*/*.py \
     "
 
-FILES_${PN}-dbg += " \
+FILES_${PN}-dbg += "\
     ${PYTHON_SITEPACKAGES_DIR}/*/.debug \
     ${PYTHON_SITEPACKAGES_DIR}/*/*/.debug \
     ${PYTHON_SITEPACKAGES_DIR}/*/*/*/.debug \

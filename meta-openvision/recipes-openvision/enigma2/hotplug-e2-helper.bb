@@ -13,4 +13,4 @@ SRC_URI = "${GITHUB_URI}/OpenPLi/${BPN}.git"
 
 S = "${WORKDIR}/git"
 
-SRC_URI_append_sh4 += "file://hotplug-e2-helper.patch"
+SRC_URI_append_sh4 = " file://hotplug-e2-helper.patch"

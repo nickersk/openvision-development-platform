@@ -15,6 +15,6 @@ S = "${WORKDIR}/git"
 
 DEPENDS = "libusb1"
 
-EXTRA_OECMAKE += " -DLIB_INSTALL_DIR=${libdir}"
+EXTRA_OECMAKE += "-DLIB_INSTALL_DIR=${libdir}"
 
 EXTRA_OECONF = "--enable-driver-detach"

@@ -48,6 +48,7 @@ If you see your model in https://github.com/OpenVisionE2/openvision-development-
 
 You could compile Open Vision for so many brands/models:
 * Vision-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md
+* You need Ubuntu Desktop 20.04.x LTS x64 (Native): https://releases.ubuntu.com/
 
 # How to build an Open Vision image (on native Ubuntu Desktop 20.04.x LTS x64)
 
@@ -73,7 +74,7 @@ After each OE update you have to remove your "build" folder then use "image.sh" 
 # Hints for multiple architectures
 
 * Removing the "build" directory solves most of the errors. For a fast remove use "cleanup.sh".
-* If you want to compile images for 4K machines with ARM architecture and you get error each time, try compile for a Mipsel machine like dm7020hd first then compile your ARM images.
+* If you want to compile images for 4K machines with ARM architecture and you get error each time, try compile for a Mipsel machine first then compile your ARM images.
 
 # Blacklisted companies/teams/persons
 

@@ -12,5 +12,5 @@ inherit autotools lib_package binconfig pkgconfig
 
 CONFIGUREOPTS_remove = "--disable-silent-rules"
 
-CFLAGS_append_sh4 += "-std=gnu11"
+CFLAGS_append_sh4 = " -std=gnu11"
 

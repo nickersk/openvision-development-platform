@@ -20,4 +20,4 @@ do_compile_prepend() {
         sed -i 's#/usr/local#/usr#' ${S}/Makefile
 }
 
-CFLAGS_append_sh4 += " -std=gnu99"
+CFLAGS_append_sh4 = " -std=gnu99"
