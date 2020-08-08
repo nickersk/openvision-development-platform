@@ -42,9 +42,7 @@ EXTRA_OECONF = "\
 	"
 
 FILES_${PN} = "\
-	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/*.pyo \
-	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/locale/*/LC_MESSAGES/ServiceApp.mo \
-	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/serviceapp.so"
+	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/"
 
 FILES_${PN}-dev = "\
 	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/serviceapp.la"
