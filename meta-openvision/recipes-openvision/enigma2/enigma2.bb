@@ -167,6 +167,7 @@ EXTRA_OECONF = "\
 	STAGING_INCDIR=${STAGING_INCDIR} \
 	STAGING_LIBDIR=${STAGING_LIBDIR} \
 	--with-boxbrand=${BOX_BRAND} \
+	--with-stbplatform=${STB_PLATFORM} \
 	--with-oever=${VISIONVERSION} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bwlcd128", "--with-bwlcd128" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bwlcd140", "--with-bwlcd140" , "", d)} \
@@ -189,6 +190,7 @@ EXTRA_OECONF_sh4 = "\
 	--enable-${MACHINE} --with-lcd \
 	--with-libsdl=no --with-boxtype=${MACHINE} \
 	--with-boxbrand=${BOX_BRAND} \
+	--with-stbplatform=${STB_PLATFORM} \
 	--with-oever=${VISIONVERSION} \
 	--enable-dependency-tracking \
 	ac_cv_prog_c_openmp=-fopenmp \
