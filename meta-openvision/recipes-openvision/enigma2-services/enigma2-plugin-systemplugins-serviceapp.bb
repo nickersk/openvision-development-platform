@@ -25,7 +25,9 @@ pkg_postinst_${PN}_exteplayeronly() {
 	fi
 }
 
-SRC_URI = "git://github.com/OpenVisionE2/serviceapp.git;branch=develop"
+SRC_URI = " git://github.com/OpenVisionE2/serviceapp.git;branch=develop \
+			file://port-to-python3.patch \
+			"
 
 S = "${WORKDIR}/git"
 
