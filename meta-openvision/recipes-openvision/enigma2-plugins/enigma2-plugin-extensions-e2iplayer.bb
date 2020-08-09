@@ -36,8 +36,6 @@ RDEPENDS_${PN} = " \
 	${@bb.utils.contains("MACHINE_FEATURES", "libeplayer", "", "exteplayer3 gst-ifdsrc gstplayer", d)} \
 	"
 
-RDEPENDS_{PN}-src = "${PN}"
-
 deltask package_qa
 
 FILES_${PN} += "${sysconfdir}"
