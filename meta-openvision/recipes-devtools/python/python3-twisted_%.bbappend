@@ -4,3 +4,5 @@ FILES_${PN}-dbg += " \
 "
 
 RDEPENDS_${PN}-core += "${PYTHON_PN}-service-identity"
+
+FILES_${PN}-src = ""
