@@ -8,7 +8,7 @@ CONFFILES = "${sysconfdir}/auto.master ${sysconfdir}/auto.net"
 
 # Remove and change configuration files
 do_install_append() {
-	echo "/media/net /etc/auto.net --ghost" > ${D}${sysconfdir}/auto.master
+	echo "/media/net ${sysconfdir}/auto.net --ghost" > ${D}${sysconfdir}/auto.master
 	echo "# automounter configuration" > ${D}${sysconfdir}/auto.net
 	chmod 0644 ${D}${sysconfdir}/auto.net
 	rm -f ${D}${sysconfdir}/auto.smb ${D}${sysconfdir}/auto.misc ${D}${sysconfdir}/autofs_ldap_auth.conf
@@ -19,8 +19,8 @@ do_install_append() {
 
 pkg_postinst_${PN} () {
         if [ -z "$D" ]; then
-                if [ -e /etc/init.d/populate-volatile.sh ]; then
-                        /etc/init.d/populate-volatile.sh update
+                if [ -e ${sysconfdir}/init.d/populate-volatile.sh ]; then
+                        ${sysconfdir}/init.d/populate-volatile.sh update
                 fi
         fi
 }

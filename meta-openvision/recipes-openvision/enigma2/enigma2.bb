@@ -140,7 +140,7 @@ LDFLAGS_prepend = " -lxml2 "
 
 S = "${WORKDIR}/git"
 
-FILES_${PN} += "${datadir}/keymaps ${bindir} /usr/lib"
+FILES_${PN} += "${datadir}/keymaps ${bindir} ${libdir}"
 FILES_${PN}-meta = "${datadir}/meta"
 PACKAGES += "${PN}-meta ${PN}-build-dependencies"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -225,9 +225,26 @@ FILES_${PN}-dbg += "\
 do_install_append() {
 	install -d ${D}${datadir}/keymaps
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "multilib", "1", "0", d)}" = "1" ]; then
-		install -d ${D}/usr/lib
-		ln -s ${libdir}/enigma2 ${D}/usr/lib/enigma2
-		ln -s ${libdir}/${PYTHONPATHVERSION} ${D}/usr/lib/${PYTHONPATHVERSION}
+		install -d ${D}${prefix}/lib
+		ln -s ${libdir}/enigma2 ${D}${prefix}/lib/enigma2
+		ln -s ${libdir}/${PYTHONPATHVERSION} ${D}${prefix}/lib/${PYTHONPATHVERSION}
+	fi
+	install -m 0644 ${S}/data/rc_models/${RCNAME}.png ${D}${datadir}/enigma2/rc_models/
+	install -m 0644 ${S}/data/rc_models/${RCNAME}.xml ${D}${datadir}/enigma2/rc_models/
+	if [ "${MACHINE}" = "et9x00" ]; then
+		install -m 0644 ${S}/data/rc_models/et9500.png ${D}${datadir}/enigma2/rc_models/
+		install -m 0644 ${S}/data/rc_models/et9500.xml ${D}${datadir}/enigma2/rc_models/
+	elif [ "${MACHINE}" = "et6x00" ]; then
+		install -m 0644 ${S}/data/rc_models/et6500.png ${D}${datadir}/enigma2/rc_models/
+		install -m 0644 ${S}/data/rc_models/et6500.xml ${D}${datadir}/enigma2/rc_models/
+	elif [ "${MACHINE}" = "azboxhd" ]; then
+		install -m 0644 ${S}/data/rc_models/azboxelite.png ${D}${datadir}/enigma2/rc_models/
+		install -m 0644 ${S}/data/rc_models/azboxelite.xml ${D}${datadir}/enigma2/rc_models/
+	elif [ "${MACHINE}" = "ventonhdx" ]; then
+		install -m 0644 ${S}/data/rc_models/ini1.png ${D}${datadir}/enigma2/rc_models/
+		install -m 0644 ${S}/data/rc_models/ini1.xml ${D}${datadir}/enigma2/rc_models/
+		install -m 0644 ${S}/data/rc_models/ini2.png ${D}${datadir}/enigma2/rc_models/
+		install -m 0644 ${S}/data/rc_models/ini2.xml ${D}${datadir}/enigma2/rc_models/
 	fi
 }
 

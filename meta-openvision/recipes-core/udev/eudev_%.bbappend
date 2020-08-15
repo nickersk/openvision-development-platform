@@ -1,9 +1,5 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += "\
-	file://init \
-	"
-
 DEPENDS += "udev-extraconf"
 RDEPENDS_${PN} += "udev-extraconf"
 

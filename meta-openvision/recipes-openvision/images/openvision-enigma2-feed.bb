@@ -261,14 +261,12 @@ ENIGMA2_OPTIONAL += "\
 	enigma2-plugin-skins-mx-hq9w \
 	enigma2-plugin-skins-mxsline-raed \
 	enigma2-plugin-skins-octetfhd \
-	enigma2-plugin-skins-openvix \
 	enigma2-plugin-skins-pli-hd-fullnight \
 	enigma2-plugin-skins-sevenhd \
 	enigma2-plugin-skins-simple-gray-hd \
 	enigma2-plugin-skins-slyk-1080-raed \
 	enigma2-plugin-skins-turbo-raed \
 	enigma2-plugin-skins-turquoisehd \
-	enigma2-plugin-skins-universehd \
 	enigma2-plugin-skins-xionhdf \
 	enigma2-plugin-skins-whitetransfhd-raed \
 	enigma2-plugin-skins-wowcataclysmfhd-raed \

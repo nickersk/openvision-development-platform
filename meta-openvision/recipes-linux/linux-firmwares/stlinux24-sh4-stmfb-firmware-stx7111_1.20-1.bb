@@ -8,6 +8,6 @@ SRC_URI[sha256sum] = "f5ac77765ad6e3d747f76ae89f1377b7f4c2bcd4bc714048b453881f3d
 
 do_install() {
         install -d ${D}${nonarch_base_libdir}/firmware
-        install -m 0644 ${S}/lib/firmware/component_7111* ${D}${nonarch_base_libdir}/firmware
+        install -m 0644 ${S}${nonarch_base_libdir}/firmware/component_7111* ${D}${nonarch_base_libdir}/firmware
         ln -sf ${nonarch_base_libdir}/firmware/component_7111_mb618.fw ${D}${nonarch_base_libdir}/firmware/component.fw
 }

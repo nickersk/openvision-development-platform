@@ -22,10 +22,10 @@ S = "${WORKDIR}/2010_0825_RT61_Linux_STA_v${PV}/Module"
 EXTRA_OEMAKE = "LINUX_SRC=${STAGING_KERNEL_DIR} KDIR=${STAGING_KERNEL_DIR}"
 
 do_install() {
-    install -d ${D}/lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless
-    install -m 0644 ${S}/rt61.ko ${D}/lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless
-    install -d ${D}/lib/firmware
-    install -m 0644 ${S}/*.bin ${D}/lib/firmware/
-    install -d ${D}/${sysconfdir}/modules-load.d
-    echo rt61 >> ${D}/${sysconfdir}/modules-load.d/rt61.conf
+    install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless
+    install -m 0644 ${S}/rt61.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless
+    install -d ${D}${nonarch_base_libdir}/firmware
+    install -m 0644 ${S}/*.bin ${D}${nonarch_base_libdir}/firmware/
+    install -d ${D}${sysconfdir}/modules-load.d
+    echo rt61 >> ${D}${sysconfdir}/modules-load.d/rt61.conf
 }

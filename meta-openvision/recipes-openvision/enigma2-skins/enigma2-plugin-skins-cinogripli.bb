@@ -18,7 +18,7 @@ RRECOMMENDS_${PN} += "\
 
 SRC_URI = "git://github.com/audi06/CinoGriPLi.git;protocol=git"
 
-FILES_${PN} = "/usr"
+FILES_${PN} = "${prefix}"
 
 S = "${WORKDIR}/git"
 

@@ -31,23 +31,23 @@ SRC_URI[sha256sum] = "f937631d376216bc830d6ffcd5b4ecb1806afd4012a184849da1a333a7
 
 S = "${WORKDIR}/pyload"
 
-FILES_${PN} = "/usr/pyload/* ${sysconfdir}/*"
+FILES_${PN} = "${prefix}/pyload/* ${sysconfdir}/*"
 
 INITSCRIPT_NAME = "${PN}"
 INITSCRIPT_PARAMS = "defaults 60 "
 
 do_install() {
 	install -d ${D}${sysconfdir}/init.d
-	install -d ${D}/usr/pyload
+	install -d ${D}${prefix}/pyload
 
-	cp -r ${S}/icons ${D}/usr/pyload
-	cp -r ${S}/locale ${D}/usr/pyload
-	cp -r ${S}/module ${D}/usr/pyload
-	cp -r ${S}/scripts ${D}/usr/pyload
-	install -m 755 ${S}/pyLoadCli.py ${D}/usr/pyload
-	install -m 755 ${S}/pyLoadCore.py ${D}/usr/pyload
-	install -m 755 ${S}/systemCheck.py ${D}/usr/pyload
-	cp ${WORKDIR}/pyload.tar.gz.defaults ${D}/usr/pyload/pyload-defaults.tar.gz
+	cp -r ${S}/icons ${D}${prefix}/pyload
+	cp -r ${S}/locale ${D}${prefix}/pyload
+	cp -r ${S}/module ${D}${prefix}/pyload
+	cp -r ${S}/scripts ${D}${prefix}/pyload
+	install -m 755 ${S}/pyLoadCli.py ${D}${prefix}/pyload
+	install -m 755 ${S}/pyLoadCore.py ${D}${prefix}/pyload
+	install -m 755 ${S}/systemCheck.py ${D}${prefix}/pyload
+	cp ${WORKDIR}/pyload.tar.gz.defaults ${D}${prefix}/pyload/pyload-defaults.tar.gz
 	
 	install -m 0755 ${WORKDIR}/pyload.init ${D}${sysconfdir}/init.d/pyload
 }

@@ -26,4 +26,4 @@ S = "${WORKDIR}/git/${SKINNAME}"
 
 do_package_qa[noexec] = "1"
 
-FILES_${PN} = "/usr"
+FILES_${PN} = "${prefix}"

@@ -107,25 +107,25 @@ pkg_postinst_${BPN}-common_prepend() {
 
 if [ -z "$D" ]; then
 	# make sure we have the root user in smbpasswd
-	[ -e /etc/samba/private/smbpasswd ] || touch /etc/samba/private/smbpasswd
-	grep -qE '^root:' /etc/samba/private/smbpasswd
+	[ -e ${sysconfdir}/samba/private/smbpasswd ] || touch ${sysconfdir}/samba/private/smbpasswd
+	grep -qE '^root:' ${sysconfdir}/samba/private/smbpasswd
 	if [[ $? -ne 0 ]] ; then
 		smbpasswd -Lan root >/dev/null
 	fi
 fi
 
 # add smbpass support to pam.d
-grep -v "pam_smbpass.so" $D${sysconfdir}/pam.d/common-password > $D/var/tmp/common-password
-printf "password\toptional\t\t\tpam_smbpass.so nullok use_authtok use_first_pass\n" >> $D/var/tmp/common-password
-mv $D/var/tmp/common-password $D${sysconfdir}/pam.d/common-password
+grep -v "pam_smbpass.so" $D${sysconfdir}/pam.d/common-password > $D${localstatedir}/tmp/common-password
+printf "password\toptional\t\t\tpam_smbpass.so nullok use_authtok use_first_pass\n" >> $D${localstatedir}/tmp/common-password
+mv $D${localstatedir}/tmp/common-password $D${sysconfdir}/pam.d/common-password
 }
 
 pkg_prerm_${BPN}-common() {
 #!/bin/sh
 
 # remove smbpass support from pam.d
-grep -v "pam_smbpass.so" /etc/pam.d/common-password > /tmp/common-password
-mv /tmp/common-password /etc/pam.d/common-password
+grep -v "pam_smbpass.so" ${sysconfdir}/pam.d/common-password > /tmp/common-password
+mv /tmp/common-password ${sysconfdir}/pam.d/common-password
 }
 
 inherit update-rc.d upx_compress

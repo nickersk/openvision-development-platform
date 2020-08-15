@@ -54,6 +54,8 @@ do_install() {
 	echo "imagetype=${DISTRO_TYPE}" >> ${D}${sysconfdir}/image-version
 	echo "oe=${BUILD_VERSION}" >> ${D}${sysconfdir}/image-version
 	echo "${BUILD_VERSION}" > ${D}${sysconfdir}/openvision/oe
+	echo "kernel=${KERNELVERSION}" >> ${D}${sysconfdir}/image-version
+	echo "${KERNELVERSION}" > ${D}${sysconfdir}/openvision/kernel
 	echo "python=${PREFERRED_VERSION_python}" >> ${D}${sysconfdir}/image-version
 	echo "${PREFERRED_VERSION_python}" > ${D}${sysconfdir}/openvision/python
 	echo "mediaservice=${PREFERRED_PROVIDER_virtual/enigma2-mediaservice}" >> ${D}${sysconfdir}/image-version
@@ -68,12 +70,16 @@ do_install() {
 	echo "display-type=${DISPLAY_TYPE}" >> ${D}${sysconfdir}/image-version
 	echo "blindscanbinary=${BLINDSCAN_BINARY}" >> ${D}${sysconfdir}/image-version
 	echo "${BLINDSCAN_BINARY}" > ${D}${sysconfdir}/openvision/blindscanbinary
+	echo "rctype=${RCTYPE}" >> ${D}${sysconfdir}/image-version
+	echo "${RCTYPE}" > ${D}${sysconfdir}/openvision/rctype
+	echo "rcname=${RCNAME}" >> ${D}${sysconfdir}/image-version
+	echo "${RCNAME}" > ${D}${sysconfdir}/openvision/rcname
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "1", "0", d)}" = "1" ]; then
-		echo "small-flash=${HAVE_SMALLFLASH}" >> ${D}/etc/image-version
+		echo "small-flash=${HAVE_SMALLFLASH}" >> ${D}${sysconfdir}/image-version
 		echo "smallflash" > ${D}${sysconfdir}/openvision/smallflash
 	fi
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "middleflash", "1", "0", d)}" = "1" ]; then
-		echo "middle-flash=${HAVE_MIDDLEFLASH}" >> ${D}/etc/image-version
+		echo "middle-flash=${HAVE_MIDDLEFLASH}" >> ${D}${sysconfdir}/image-version
 		echo "middleflash" > ${D}${sysconfdir}/openvision/middleflash
 	fi
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "transcoding", "1", "0", d)}" = "1" ]; then

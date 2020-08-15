@@ -12,7 +12,7 @@ do_configure () {
 	find ${S} -name "configure" | xargs touch
 	cfgscript=`python3 -c "import os; print(os.path.relpath('${S}', '.'))"`/configure
 	$cfgscript --host=${TARGET_SYS} --build=${BUILD_SYS} \
-		--prefix=/usr \
+		--prefix=${prefix} \
 		--disable-sanity-checks \
 		--with-headers=${STAGING_DIR_TARGET}${includedir} \
 		--enable-hacker-mode --enable-addons

@@ -28,9 +28,9 @@ INITSCRIPT_NAME = "minidlna.sh"
 INITSCRIPT_PARAMS = "stop 21 0 1 6 ."
 
 do_install_append() {
-	install -m 755 -d ${D}/${sysconfdir}/
-	install -m 644 ${S}/minidlna.conf ${D}/${sysconfdir}/
-	install -m 755 -d ${D}/${sysconfdir}/init.d/
-	install -m 755 ${S}/minidlna.sh ${D}/${sysconfdir}/init.d/
+	install -m 755 -d ${D}${sysconfdir}/
+	install -m 644 ${S}/minidlna.conf ${D}${sysconfdir}/
+	install -m 755 -d ${D}${sysconfdir}/init.d/
+	install -m 755 ${S}/minidlna.sh ${D}${sysconfdir}/init.d/
 	install -m 755 -d ${D}${localstatedir}/lib/minidlna/
 }
