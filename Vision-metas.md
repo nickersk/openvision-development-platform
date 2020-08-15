@@ -123,6 +123,8 @@
 * iziboxx3
 * protek4kx1
 * turing
+* viper4kv20
+* vipers
 
 # Dreambox
 * dm500hd
