@@ -11,7 +11,9 @@ RPROVIDES_${PN} += "virtual/enigma2-mediaservice"
 DEPENDS = "enigma2"
 RDEPENDS_${PN} = "enigma2"
 
-SRC_URI = "git://github.com/OpenVisionE2/servicehisilicon.git;branch=master"
+SRC_URI = " git://github.com/OpenVisionE2/servicehisilicon.git;branch=master \
+			file://0001-Map-python2-c-api-functions.patch \
+			"
 
 S = "${WORKDIR}/git"
 

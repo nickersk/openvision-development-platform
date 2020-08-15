@@ -1,0 +1,39 @@
+From f3c918db87d361916088e925f8dd098757880b9f Mon Sep 17 00:00:00 2001
+From: Hains <hainsvdbosch@ziggo.nl>
+Date: Sun, 16 Aug 2020 00:15:35 +0200
+Subject: [PATCH] Map python2 c api functions
+
+---
+ servicehisilicon/pythonmodule.cpp | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+
+diff --git a/servicehisilicon/pythonmodule.cpp b/servicehisilicon/pythonmodule.cpp
+index 96480ff..9124c89 100644
+--- a/servicehisilicon/pythonmodule.cpp
++++ b/servicehisilicon/pythonmodule.cpp
+@@ -6,8 +6,19 @@ static PyMethodDef servicehisiliconMethods[] =
+ 	{NULL,NULL,0,NULL}
+ };
+ 
+-PyMODINIT_FUNC
+-initservicehisilicon(void)
++static struct PyModuleDef moduledef = {
++	PyModuleDef_HEAD_INIT,
++	"servicehisilicon",        /* m_name */
++	"servicehisilicon",        /* m_doc */
++	-1,                        /* m_size */
++	servicehisiliconMethods,   /* m_methods */
++	NULL,                      /* m_reload */
++	NULL,                      /* m_traverse */
++	NULL,                      /* m_clear */
++	NULL,                      /* m_free */
++};
++
++PyMODINIT_FUNC PyInit_servicehisilicon(void)
+ {
+-	Py_InitModule("servicehisilicon", servicehisiliconMethods);
++	return PyModule_Create(&moduledef);
+ }
+-- 
+2.25.1
+
