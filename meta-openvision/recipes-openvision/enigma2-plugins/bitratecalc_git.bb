@@ -11,7 +11,9 @@ inherit gitpkgv autotools python3native pkgconfig
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/bitratecalc.git;protocol=http"
+SRC_URI = "git://github.com/OpenVisionE2/bitratecalc.git;protocol=http \
+           file://0001-bitratcalac.cpp-Map-c-api-functions.patch \
+           "
 
 CXXFLAGS_append_sh4 = " -std=c++11"
 

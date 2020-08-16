@@ -1,0 +1,51 @@
+diff --git a/bitratecalc.cpp b/bitratecalc.cpp
+index 763ddf2..e6c6f17 100644
+--- a/bitratecalc.cpp
++++ b/bitratecalc.cpp
+@@ -155,7 +155,7 @@ static void
+ eBitrateCalculatorPy_dealloc(eBitrateCalculatorPy* self)
+ {
+ 	eBitrateCalculatorPy_clear(self);
+-	self->ob_type->tp_free((PyObject*)self);
++	Py_TYPE(self)->tp_free((PyObject*)self);
+ }
+ 
+ static PyObject *
+@@ -187,7 +187,6 @@ static PyGetSetDef eBitrateCalculatorPy_getseters[] = {
+ static PyTypeObject eBitrateCalculatorPyType = {
+ 	PyObject_HEAD_INIT(NULL)
+ 	0, /*ob_size*/
+-	"eBitrateImpl.eBitrateCalculator", /*tp_name*/
+ 	sizeof(eBitrateCalculatorPy), /*tp_basicsize*/
+ 	0, /*tp_itemsize*/
+ 	(destructor)eBitrateCalculatorPy_dealloc, /*tp_dealloc*/
+@@ -230,13 +229,24 @@ static PyMethodDef module_methods[] = {
+ 	{NULL}  /* Sentinel */
+ };
+ 
+-PyMODINIT_FUNC
+-initbitratecalc(void)
++static struct PyModuleDef moduledef = {
++	PyModuleDef_HEAD_INIT,
++	"bitratecalc",       /* m_name */
++	"bitratecalc",       /* m_doc */
++	-1,                  /* m_size */
++	module_methods,      /* m_methods */
++	NULL,                /* m_reload */
++	NULL,                /* m_traverse */
++	NULL,                /* m_clear */
++	NULL,                /* m_free */
++};
++
++PyMODINIT_FUNC PyInit_bitratecalc(void)
+ {
+-	PyObject* m = Py_InitModule3("bitratecalc", module_methods,
+-		"Module that implements bitrate calculations.");
++	PyObject* m = PyModule_Create(&moduledef);
++
+ 	if (m == NULL)
+-		return;
++		return NULL;
+ 	if (!PyType_Ready(&eBitrateCalculatorPyType))
+ 	{
+ 		Org_Py_INCREF((PyObject*)&eBitrateCalculatorPyType);
