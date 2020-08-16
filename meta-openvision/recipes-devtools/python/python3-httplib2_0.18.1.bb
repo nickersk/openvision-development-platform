@@ -16,7 +16,7 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 inherit setuptools3 python3-dir
 
 do_compile_append() {
-       python2 -O -m compileall ${W}/build
+       python3 -O -m compileall ${W}/build
 }
 
 do_install_append() {
