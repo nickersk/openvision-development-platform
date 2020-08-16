@@ -39,7 +39,6 @@ ENIGMA2_PLUGINS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", " \
 	enigma2-plugin-extensions-autobackup \
 	enigma2-plugin-extensions-tmbd \
-	enigma2-plugin-extensions-epgimport \
 	enigma2-plugin-extensions-epgrefresh \
 	enigma2-plugin-extensions-openwebif-themes \
 	enigma2-plugin-extensions-reconstructapsc \
