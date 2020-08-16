@@ -25,7 +25,6 @@ RDEPENDS_${PN} = " \
 	lsdir \
 	python3-compression \
 	python3-core \
-	python3-e2icjson \
 	python3-html \
 	python3-json \
 	python3-pycurl \
