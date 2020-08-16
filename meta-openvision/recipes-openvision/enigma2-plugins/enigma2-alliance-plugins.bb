@@ -9,7 +9,7 @@ inherit autotools-brokensep gitpkgv python3native gettext rm_python_pyc compile_
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/alliance-plugins.git;protocol=http"
+SRC_URI = "git://github.com/OpenVisionE2/alliance-plugins.git;protocol=http;branch=python3"
 
 S = "${WORKDIR}/git"
 
