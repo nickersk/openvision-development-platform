@@ -49,7 +49,6 @@ ENIGMA2_PLUGINS += "\
 	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash", "", " \
 	enigma2-plugin-extensions-e2iplayer \
 	enigma2-plugin-extensions-filecommander \
-	enigma2-plugin-extensions-keyadder \
 	enigma2-plugin-extensions-openmultiboot \
 	enigma2-plugin-softcams-oscam \
 	enigma2-plugin-systemplugins-autobouquetsmaker", d)} \
@@ -59,7 +58,6 @@ ENIGMA2_PLUGINS += "\
 DEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "blindscan-tbs", "blindscan-s2" , "", d)} \
 	enigma2 \
-	enigma2-alliance-plugins \
 	enigma2-locale-meta \
 	enigma2-plugins \
 	"
