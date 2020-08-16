@@ -4,12 +4,11 @@ SECTION = "devel/python"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d8bf5ff31155bfe951a02be0c29215d3"
 
-SRC_URI = "https://files.pythonhosted.org/packages/source/P/PyAMF/PyAMF-${PV}.tar.gz"
+SRC_URI = "https://files.pythonhosted.org/packages/f4/f5/d2fb7c5ee1d3e296a328a0205bcf0cce78b57f0a1c822f7e5eadacbe83e2/Py3AMF-${PV}.tar.gz"
 
-SRC_URI[md5sum] = "51e810531a663b55e686286edb23e82a"
-SRC_URI[sha256sum] = "0455d68983e3ee49f82721132074877428d58acec52f19697a88c03b5fba74e4"
+SRC_URI[sha256sum] = "6dac2d34a09daf5351e654e8cdc3026b3560a6db498c17cdcc84322b3149952c"
 
-S = "${WORKDIR}/PyAMF-${PV}"
+S = "${WORKDIR}/Py3AMF-${PV}"
 
 inherit setuptools3 distutils3
 

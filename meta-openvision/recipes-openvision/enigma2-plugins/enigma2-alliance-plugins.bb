@@ -81,7 +81,7 @@ DEPENDS = "\
     libupnp \
     minidlna \
     neon \
-    python3-beautifulsoup4 python3-dnspython python3-icalendar python3-lxml python3-pexpect python3-pyamf python3-pyusb python3-simplejson \
+    python3-beautifulsoup4 python3-dnspython python3-icalendar python3-lxml python3-pexpect python3-py3amf python3-pyusb python3-simplejson \
     satipclient \
     ${@bb.utils.contains_any("MACHINE_FEATURES", "streamproxy transcoding multitranscoding", "${TRANSCODING_CHECK}", "", d)} \
     "
@@ -101,7 +101,7 @@ RDEPENDS_enigma2-plugin-extensions-lcd4linux = "bitratecalc lcd4linux python3-ic
 FILES_enigma2-plugin-extensions-lcd4linux_append = " ${libdir}/enigma2/python/Components/Renderer/*.py ${libdir}/enigma2/python/Plugins/Extensions/LCD4linux/plugin.py"
 FILES_enigma2-plugin-extensions-lcd4linux-src_append = " ${libdir}/enigma2/python/Components/Renderer/*.py"
 DESCRIPTION_enigma2-plugin-extensions-ondemand = "Watch on demand TV."
-RDEPENDS_enigma2-plugin-extensions-ondemand = "python3-beautifulsoup python3-dnspython python3-lxml python3-pyamf python3-simplejson"
+RDEPENDS_enigma2-plugin-extensions-ondemand = "python3-beautifulsoup python3-dnspython python3-lxml python3-py3amf python3-simplejson"
 DESCRIPTION_enigma2-plugin-extensions-rcuselect = "Change Remote for Amlogic"
 DESCRIPTION_enigma2-plugin-extensions-rezap = "ReZap Sync Tool for Wetek"
 DESCRIPTION_enigma2-plugin-extensions-streamtv = "iptv player"
