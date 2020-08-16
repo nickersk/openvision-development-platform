@@ -9,7 +9,7 @@ inherit autotools-brokensep gitpkgv python3native pkgconfig gettext rm_python_py
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/enigma2-plugins.git;protocol=http"
+SRC_URI = "git://github.com/OpenVisionE2/enigma2-plugins.git;protocol=http;branch=python3"
 
 S = "${WORKDIR}/git"
 
