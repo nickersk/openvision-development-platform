@@ -15,7 +15,7 @@ else
     exit 0
 fi
 VISIONVERSION=`cat meta-openvision/conf/distro/openvision-common.conf | grep -oP '(?<=VISIONVERSION = ")[0-9].[0-9]*'`
-VISIONREVISION=`cat meta-openvision/conf/distro/openvision-common.conf | grep -oP '(?<=VISIONREVISION = "r)[0-9]*'`
+VISIONREVISION=`cat meta-openvision/conf/distro/revision.conf | grep -oP '(?<=VISIONREVISION = "r)[0-9]*'`
 echo -e "${BLUE}Welcome to Open Vision ${GREEN}${VISIONVERSION}-r${VISIONREVISION} ${BLUE}image compile script!"
 echo -e ""
 echo -e "${RED}Notice: this script is case sensitive!${NC}"
@@ -619,17 +619,22 @@ then
 fi
 if [ $META = "Zgemma" ]
 then
+	MACHINE=h0 $IMAGECMD
 	MACHINE=h10 $IMAGECMD
 	MACHINE=h3 $IMAGECMD
 	MACHINE=h4 $IMAGECMD
 	MACHINE=h5 $IMAGECMD
 	MACHINE=h6 $IMAGECMD
 	MACHINE=h7 $IMAGECMD
+	MACHINE=h8 $IMAGECMD
 	MACHINE=h9 $IMAGECMD
 	MACHINE=h9combo $IMAGECMD
 	MACHINE=i55 $IMAGECMD
 	MACHINE=i55plus $IMAGECMD
 	MACHINE=lc $IMAGECMD
+	MACHINE=novacombo $IMAGECMD
+	MACHINE=novaip $IMAGECMD
+	MACHINE=novatwin $IMAGECMD
 	MACHINE=sh1 $IMAGECMD
 fi
 echo -e ""

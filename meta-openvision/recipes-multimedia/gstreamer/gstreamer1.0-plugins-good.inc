@@ -6,7 +6,7 @@ DEPENDS += "gstreamer1.0-plugins-base libcap orc zlib bzip2"
 
 inherit gettext
 
-PACKAGECONFIG ??= "cairo flac gdk-pixbuf jpeg lame mpg123 soup speex taglib vpx wavpack"
+PACKAGECONFIG ??= "cairo flac gdk-pixbuf jpeg lame mpg123 soup speex taglib ${@bb.utils.contains('MACHINE_FEATURES', 'novp9', '', 'vpx',d)} wavpack"
 
 PACKAGECONFIG[cairo]		= "-Dcairo=enabled,-Dcairo=disabled,cairo"
 PACKAGECONFIG[flac]			= "-Dflac=enabled,-Dflac=disabled,flac"

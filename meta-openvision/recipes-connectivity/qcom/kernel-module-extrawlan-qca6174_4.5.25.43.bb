@@ -8,9 +8,9 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 inherit module machine_kernel_pr
 
 SRC_URI = "${CAF_MIRROR}/qcacld-2.0/snapshot/qcacld-2.0-${PV}.tar.gz \
-    file://qcacld-2.0-support.patch \
-    ${@bb.utils.contains_any("MACHINE", "spycat4k spycat4kcombo spycat4kmini", "file://qcacld-2.0-support-xc7439.patch", "", d)} \
-"
+	file://qcacld-2.0-support.patch \
+	${@bb.utils.contains_any("MACHINE", "spycat4k spycat4kcombo spycat4kmini", "file://qcacld-2.0-support-xc7439.patch", "", d)} \
+	"
 
 SRC_URI[md5sum] = "470372b7c7614059faa49afe13576fee"
 SRC_URI[sha256sum] = "d6554ffc91f130f1020ad1d317ce44ee7b5baf19743a3fd0946f5210a14aa5d6"

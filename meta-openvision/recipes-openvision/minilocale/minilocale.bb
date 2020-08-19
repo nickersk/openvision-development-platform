@@ -5,9 +5,6 @@ PRIORITY = "required"
 
 require conf/license/license-gplv2.inc
 
-# Use machine architecture to avoid "prefer arch over version" to do anything bad
-PACKAGE_ARCH = "${DEFAULTTUNE}"
-
 SRC_URI = "\
 	https://raw.githubusercontent.com/OpenVisionE2/hypercube-files/master/locales.tar.xz;name=locales \
 	https://raw.githubusercontent.com/OpenVisionE2/hypercube-files/master/c-utf-8.tar.xz;name=c-utf-8 \
