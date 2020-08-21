@@ -14,8 +14,6 @@ SRC_URI = "file://process.py"
 
 S = "${WORKDIR}"
 
-PACKAGES = "${PN} ${PN}-src"
-
 FILES_${PN} = "${PYTHON_SITEPACKAGES_DIR}/process.py"
 
 do_compile() {
