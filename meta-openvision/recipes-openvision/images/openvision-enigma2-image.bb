@@ -7,7 +7,7 @@ TRANSCODING_CHECK = "${@bb.utils.contains_any("MACHINE_FEATURES", "vuplus gigabl
 
 ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-audiosync \
-	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash nogamma rpi-vision sh4stb azbox", "", "enigma2-plugin-extensions-backupsuite", d)} \
+	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash sh4stb azbox", "", "enigma2-plugin-extensions-backupsuite", d)} \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash", "enigma2-plugin-extensions-cacheflush", "", d)} \
 	enigma2-plugin-extensions-cutlisteditor \
 	enigma2-plugin-extensions-graphmultiepg \
@@ -71,8 +71,8 @@ RDEPENDS += "\
 MACHINE_FEATURE_RELATED_PLUGINS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "enigma2-plugin-extensions-btdevicesmanager kernel-module-bluetooth", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "dvd", "enigma2-plugin-extensions-cdinfo enigma2-plugin-extensions-dvdplayer", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "gbipboxclient", "enigma2-plugin-extensions-gbipboxclient", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "grautec", "enigma2-plugin-extensions-grautec", "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "enigma2-plugin-extensions-rcuselect", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "multitranscoding", "enigma2-plugin-systemplugins-multitranscodingsetup", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "satip", "enigma2-plugin-systemplugins-satipclient" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "dvd", "cdtextinfo", "", d)} \

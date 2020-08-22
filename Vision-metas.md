@@ -1,4 +1,4 @@
-# Here is the list of what 10.1 supports:
+# Here is the list of what 10.2 supports:
 
 # Amiko
 * viper4k

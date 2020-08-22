@@ -86,7 +86,7 @@ RDEPENDS_${PN} = "\
 	${GST_UGLY_RDEPS} \
 	"
 
-SRC_URI = "${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "git://github.com/OpenVisionE2/servicemp3amlogic.git", "git://github.com/OpenVisionE2/servicemp3.git file://0001-Map-python2-c-api-functions.patch", d)}"
+SRC_URI = "git://github.com/OpenVisionE2/servicemp3.git file://0001-Map-python2-c-api-functions.patch"
 
 S = "${WORKDIR}/git"
 
@@ -101,7 +101,6 @@ EXTRA_OECONF = "\
 	HOST_SYS=${HOST_SYS} \
 	STAGING_INCDIR=${STAGING_INCDIR} \
 	STAGING_LIBDIR=${STAGING_LIBDIR} \
-	${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "--with-boxtype=${MACHINE} --with-boxbrand=${BOX_BRAND} --with-amlogic" , "", d)} \
 	"
 
 FILES_${PN} = "\

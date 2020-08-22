@@ -18,7 +18,6 @@ PKGV = "2.0.1+git${GITPKGV}"
 
 EXTRA_OECONF = "--with-configdir=${sysconfdir} \
 	${@bb.utils.contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "--with-nogamma" , "", d)} \
 	"
 
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
